@@ -3,6 +3,7 @@ package com.tamcodes.springdatajpa.models;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -12,9 +13,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Builder
+@SuperBuilder
 @Entity //this is from Jakarta persistence
-public class Author {
+public class Author extends BaseEntity {
 
     @Id
     @GeneratedValue(
@@ -50,12 +51,12 @@ public class Author {
     private String email;
 
     private int age;
-
-    @Column(updatable = false, nullable = false)
-    private LocalDateTime createdAt;
-
-    @Column(insertable = false)
-    private LocalDateTime lastModified;
+//
+//    @Column(updatable = false, nullable = false)
+//    private LocalDateTime createdAt;
+//
+//    @Column(insertable = false)
+//    private LocalDateTime lastModified;
 
 
     @ManyToMany(mappedBy = "authors")

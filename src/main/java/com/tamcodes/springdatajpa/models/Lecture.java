@@ -2,14 +2,15 @@ package com.tamcodes.springdatajpa.models;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@SuperBuilder
 @Entity
-public class Lecture {
+public class Lecture extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
