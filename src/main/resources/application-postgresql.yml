@@ -1,4 +1,5 @@
 
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/ForSpringJPA
@@ -10,5 +11,3 @@ spring:
       ddl-auto: create-drop
     database: postgresql
     show-sql: true
-
-

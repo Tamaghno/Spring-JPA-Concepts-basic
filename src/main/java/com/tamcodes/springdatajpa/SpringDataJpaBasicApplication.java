@@ -16,21 +16,21 @@ public class SpringDataJpaBasicApplication {
 		SpringApplication.run(SpringDataJpaBasicApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner(
-			AuthorRepository repo
-	){
-		return args -> {
-			Author author = Author.builder()
-					.firstname("Tama")
-					.lastname("Cha")
-					.age(12)
-					.email("oiuyt@gmail.com")
-					.createdAt(LocalDateTime.now())
-					.build();
-
-			repo.save(author);
-		};
-	}
+//	@Bean
+//	public CommandLineRunner commandLineRunner(
+//			AuthorRepository repo
+//	){
+//		return args -> {
+//			Author author = Author.builder()
+//					.firstname("Tama")
+//					.lastname("Cha")
+//					.age(12)
+//					.email("oiuyt@gmail.com")
+//					.createdAt(LocalDateTime.now())
+//					.build();
+//
+//			repo.save(author);
+//		};
+//	}
 
 }

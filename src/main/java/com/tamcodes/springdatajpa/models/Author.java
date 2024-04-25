@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -13,7 +14,6 @@ import java.time.LocalDateTime;
 @ToString
 @Builder
 @Entity //this is from Jakarta persistence
-@Table(name = "AUTHOR_TBL")
 public class Author {
 
     @Id
@@ -56,4 +56,8 @@ public class Author {
 
     @Column(insertable = false)
     private LocalDateTime lastModified;
+
+
+    @ManyToMany(mappedBy = "authors")
+    private List<Course> courses; //Many to many relation with Course entity
 }
