@@ -11,9 +11,10 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Builder
 @Entity //this is from Jakarta persistence
 @Table(name = "AUTHOR_TBL")
-public class author {
+public class Author {
 
     @Id
     @GeneratedValue(
